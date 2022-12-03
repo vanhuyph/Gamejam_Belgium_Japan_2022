@@ -10,6 +10,16 @@ public class Inventory : MonoBehaviour
 
     public static Inventory instance;
 
+    public float GetBlackOrbRate()
+    {
+        if (blackOrbsCount + whiteOrbsCount == 0)
+        {
+            return 0.0f;
+        }
+        
+        return blackOrbsCount / (blackOrbsCount + whiteOrbsCount);
+    }
+
     private void Awake()
     {
         if (instance != null)

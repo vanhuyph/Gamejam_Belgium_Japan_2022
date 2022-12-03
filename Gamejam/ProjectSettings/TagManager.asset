@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WhiteOrb
   - BlackOrb
+  - Ladder
   layers:
   - Default
   - TransparentFX

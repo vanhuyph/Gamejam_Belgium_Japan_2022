@@ -5,7 +5,9 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     GameObject playerObj;
+    Camera cameraComponent;
     
+    [SerializeField] int camDistance = 5;
     [SerializeField] float minPos = -5.0f;
     [SerializeField] float maxPos = 100.0f;
     
@@ -13,12 +15,15 @@ public class CameraScript : MonoBehaviour
     void Start()
     {
         playerObj = GameObject.FindGameObjectWithTag("Player");
+        cameraComponent = GetComponent<Camera>();
     }
 
     // Update is called once per frame
     void LateUpdate()
-    {
-        transform.position = playerObj.transform.position + new Vector3(0.0f, 2.0f, -10.0f);
+    {   
+        cameraComponent.orthographicSize = camDistance;
+        
+        //transform.position = playerObj.transform.position + new Vector3(0.0f, 4.0f, -10.0f);
         
         var posX = Mathf.Clamp(transform.position.x, minPos, maxPos);
         transform.position = new Vector3(posX, transform.position.y, transform.position.z);

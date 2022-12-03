@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4414357346035283225}
   - component: {fileID: 4414357346035283224}
   - component: {fileID: 4414357346035283223}
-  - component: {fileID: 4414357346035283227}
+  - component: {fileID: 803376097311982412}
   - component: {fileID: 4414357346035283226}
   m_Layer: 0
   m_Name: playerTest
@@ -141,8 +141,8 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!70 &4414357346035283227
-CapsuleCollider2D:
+--- !u!61 &803376097311982412
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -155,8 +155,18 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.625, y: 2.6249998}
-  m_Direction: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.625, y: 2.625}
+    newSize: {x: 2.625, y: 2.625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.625, y: 2.625}
+  m_EdgeRadius: 0
 --- !u!114 &4414357346035283226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98398ab38c2bc63448be289ee6b8b412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
+  jumpingPower: 20
   rb: {fileID: 4414357346035283223}
   groundCheck: {fileID: 4414357345823855953}
   groundLayer:
@@ -191,7 +203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4414357347192175552
 Transform:
   m_ObjectHideFlags: 0
