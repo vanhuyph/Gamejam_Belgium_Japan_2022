@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class player_controle : MonoBehaviour
+public class PlayerControl : MonoBehaviour
 {
     private float horizontal;
     private bool isFacingRight = true;
     private Inventory inventory;
     private float blackOrbsjump;
-    private float blackOrbsrate;
+    private float blackOrbsRate;
     private float vertical;
     private bool isLadder;
     private bool isClimbing;
@@ -19,7 +17,8 @@ public class player_controle : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    
+    [SerializeField] private float groundCheckRadius;
+
     Animator animator;
     
     void Start()
@@ -31,10 +30,10 @@ public class player_controle : MonoBehaviour
     {
         inventory= GameObject.FindGameObjectWithTag("inventory").GetComponent<Inventory>();
         horizontal = Input.GetAxisRaw("Horizontal");
-        blackOrbsrate = inventory.GetBlackOrbRate();
-        if (blackOrbsrate <= 1 && 0.5 < blackOrbsrate)
+        blackOrbsRate = inventory.GetBlackOrbRate();
+        if (blackOrbsRate <= 1 && 0.5 < blackOrbsRate)
         {
-            blackOrbsjump = blackOrbsrate * 2;
+            blackOrbsjump = blackOrbsRate * 2;
         }
         else
         {
@@ -118,5 +117,11 @@ public class player_controle : MonoBehaviour
             isLadder = false;
             isClimbing = false;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 }
