@@ -27,12 +27,10 @@ public class player_controle : MonoBehaviour
         if (blackOrbsrate <= 1 && 0.5 < blackOrbsrate)
         {
             blackOrbsjump = blackOrbsrate * 2;
-            Debug.Log(blackOrbsrate);
         }
         else
         {
             blackOrbsjump = 1;
-            Debug.Log(blackOrbsrate);
         }
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
