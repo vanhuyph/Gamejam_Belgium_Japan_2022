@@ -3,7 +3,7 @@ using TMPro;
 
 public class Inventory : MonoBehaviour
 {
-    public int blackOrbsCount { get; set; }
+    public int blackOrbsCount;
     public int whiteOrbsCount;
     public TMP_Text blackOrbsCountText;
     public TMP_Text whiteOrbsCountText;

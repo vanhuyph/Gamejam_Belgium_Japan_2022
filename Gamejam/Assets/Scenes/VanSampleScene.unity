@@ -782,6 +782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ffee7de0d9d144af9bb552a3f0794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackOrbsCount: 0
   whiteOrbsCount: 0
   blackOrbsCountText: {fileID: 1048142099}
   whiteOrbsCountText: {fileID: 1465626777}
