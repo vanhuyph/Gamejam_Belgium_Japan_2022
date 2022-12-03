@@ -6,7 +6,9 @@ public class player_controle : MonoBehaviour
 {
     private float horizontal;
     private bool isFacingRight = true;
-    
+    private Inventory inventory;
+    private float blackOrbsjump;
+    private float blackOrbsrate;
     private float vertical;
     private bool isLadder;
     private bool isClimbing;
@@ -17,14 +19,24 @@ public class player_controle : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-
     void Update()
     {
+        inventory= GameObject.FindGameObjectWithTag("inventory").GetComponent<Inventory>();
         horizontal = Input.GetAxisRaw("Horizontal");
-
+        blackOrbsrate = inventory.GetBlackOrbRate();
+        if (blackOrbsrate <= 1 && 0.5 < blackOrbsrate)
+        {
+            blackOrbsjump = blackOrbsrate * 2;
+            Debug.Log(blackOrbsrate);
+        }
+        else
+        {
+            blackOrbsjump = 1;
+            Debug.Log(blackOrbsrate);
+        }
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower * blackOrbsjump);
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
