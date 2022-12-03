@@ -73,7 +73,7 @@ public class player_controle : MonoBehaviour
 
     private void FixedUpdate()
     {
-        animator.SetFloat("walkSpeed", horizontal);
+        animator.SetFloat("walkSpeed", Mathf.Abs(horizontal));
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         
         if (isClimbing)
