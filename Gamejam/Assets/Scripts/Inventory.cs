@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
             return 0.0f;
         }
         
-        return blackOrbsCount / (blackOrbsCount + whiteOrbsCount);
+        return (float)blackOrbsCount / ((float)blackOrbsCount + (float)whiteOrbsCount);
     }
 
     private void Awake()
