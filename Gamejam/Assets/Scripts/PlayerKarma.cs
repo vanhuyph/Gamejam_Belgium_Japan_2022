@@ -18,13 +18,13 @@ public class PlayerKarma : MonoBehaviour
         if (orbTypes == "BlackOrb")
         {
             currentKarma += karmaPoint * 5;
-            //currentKarma = Mathf.Clamp(currentKarma, minKarma, maxKarma);
+            currentKarma = Mathf.Clamp(currentKarma, minKarma, maxKarma);
             karmaIndicator.SetValue(currentKarma);
         }
         else
         {
             currentKarma -= karmaPoint * 5;
-            //currentKarma = Mathf.Clamp(currentKarma, minKarma, maxKarma);
+            currentKarma = Mathf.Clamp(currentKarma, minKarma, maxKarma);
             karmaIndicator.SetValue(currentKarma);
         }
     }
