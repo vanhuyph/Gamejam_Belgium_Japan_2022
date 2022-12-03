@@ -6,6 +6,7 @@ public class PickupObject : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("OrbCollect");
             Inventory.instance.AddOrbPoints(1, gameObject.tag);
             PlayerKarma playerKarma = collision.transform.GetComponent<PlayerKarma>();
             playerKarma.TakeKarma(1, gameObject.tag);

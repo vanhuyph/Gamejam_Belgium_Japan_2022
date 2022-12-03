@@ -10,7 +10,7 @@ public class PlayerControl : MonoBehaviour
     private float vertical;
     private bool isLadder;
     private bool isClimbing;
-    
+
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
 
@@ -20,15 +20,15 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float groundCheckRadius;
 
     Animator animator;
-    
+
     void Start()
     {
         animator = GetComponent<Animator>();
     }
-    
+
     void Update()
     {
-        inventory= GameObject.FindGameObjectWithTag("inventory").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("inventory").GetComponent<Inventory>();
         horizontal = Input.GetAxisRaw("Horizontal");
         blackOrbsRate = inventory.GetBlackOrbRate();
         if (blackOrbsRate <= 1 && 0.5 < blackOrbsRate)
@@ -43,7 +43,7 @@ public class PlayerControl : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower * blackOrbsjump);
         }
-        
+
         if (IsGrounded())
         {
             animator.SetBool("isJump", false);
@@ -57,7 +57,7 @@ public class PlayerControl : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
-        
+
         if (isLadder)
         {
             vertical = Input.GetAxisRaw("Vertical");
@@ -74,7 +74,7 @@ public class PlayerControl : MonoBehaviour
     {
         animator.SetFloat("walkSpeed", Mathf.Abs(horizontal));
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        
+     
         if (isClimbing)
         {
             rb.gravityScale = 0.0f;
@@ -101,16 +101,16 @@ public class PlayerControl : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-    
-    private void OnTriggerEnter2D(Collider2D other) 
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Ladder")
         {
             isLadder = true;
         }
     }
-    
-    private void OnTriggerExit2D(Collider2D other) 
+
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Ladder")
         {
