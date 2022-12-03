@@ -21,6 +21,9 @@ public class KarmaIndicator : MonoBehaviour
     private float currentValue, currentScale;
     [SerializeField]
     private RectTransform valueIndicator;
+    
+    [SerializeField]
+    private GameObject tintObject;
 
     void Awake()
     {
@@ -33,6 +36,18 @@ public class KarmaIndicator : MonoBehaviour
         else
         {
             valueIndicator.pivot = Vector2.zero;
+        }
+    }
+    
+    private void Update() 
+    {
+        if (Inventory.instance.GetBlackOrbRate() > 0.45f && Inventory.instance.GetBlackOrbRate() < 0.55f)
+        {
+            tintObject.SetActive(true);
+        }
+        else
+        {
+            tintObject.SetActive(false);
         }
     }
 

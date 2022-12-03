@@ -35,12 +35,12 @@ public class Inventory : MonoBehaviour
         if (orbTypes == "WhiteOrb")
         {
             whiteOrbsCount += count;
-            whiteOrbsCountText.text = "White orbs: " + whiteOrbsCount.ToString();
+            //whiteOrbsCountText.text = "White orbs: " + whiteOrbsCount.ToString();
         }
         else
         {
             blackOrbsCount += count;
-            blackOrbsCountText.text = "Black orbs: " + blackOrbsCount.ToString();
+            //blackOrbsCountText.text = "Black orbs: " + blackOrbsCount.ToString();
         }
     }
 }
