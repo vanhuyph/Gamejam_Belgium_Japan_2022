@@ -7,6 +7,8 @@ public class PickupObject : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Inventory.instance.AddOrbPoints(1, gameObject.tag);
+            PlayerKarma playerKarma = collision.transform.GetComponent<PlayerKarma>();
+            playerKarma.TakeKarma(1, gameObject.tag);
             Destroy(gameObject);
         }
     }
