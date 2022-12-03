@@ -19,6 +19,14 @@ public class player_controle : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    
+    Animator animator;
+    
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+    
     void Update()
     {
         inventory= GameObject.FindGameObjectWithTag("inventory").GetComponent<Inventory>();
@@ -35,6 +43,15 @@ public class player_controle : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower * blackOrbsjump);
+        }
+        
+        if (IsGrounded())
+        {
+            animator.SetBool("isJump", false);
+        }
+        else
+        {
+            animator.SetBool("isJump", true);
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -56,6 +73,7 @@ public class player_controle : MonoBehaviour
 
     private void FixedUpdate()
     {
+        animator.SetFloat("walkSpeed", horizontal);
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         
         if (isClimbing)
