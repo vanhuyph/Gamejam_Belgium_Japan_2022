@@ -5897,7 +5897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41431618, y: 3.27173, z: -10}
+  m_LocalPosition: {x: 0.45049095, y: 3.27173, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77327,7 +77327,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 976404377}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 544e830d548a41d42b8c09a63547b101, type: 2}
+  m_Material: {fileID: 6200000, guid: ca5aeb02f119ae84bacad40eaf82833b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -78447,22 +78447,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 934928340996298215, guid: b1ed81c1be7f74341bbe5faf69d54b41, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 149.1327
-      objectReference: {fileID: 0}
-    - target: {fileID: 934928340996298215, guid: b1ed81c1be7f74341bbe5faf69d54b41, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 31.0137
-      objectReference: {fileID: 0}
-    - target: {fileID: 934928340996298215, guid: b1ed81c1be7f74341bbe5faf69d54b41, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -212.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 934928340996298215, guid: b1ed81c1be7f74341bbe5faf69d54b41, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 136
-      objectReference: {fileID: 0}
     - target: {fileID: 934928341088255071, guid: b1ed81c1be7f74341bbe5faf69d54b41, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -92296,7 +92280,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1963683539}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ca5aeb02f119ae84bacad40eaf82833b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
