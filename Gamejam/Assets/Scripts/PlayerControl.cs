@@ -97,10 +97,13 @@ public class PlayerControl : MonoBehaviour
         {
             rb.gravityScale = 0.0f;
             rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+            
+            animator.SetBool("isClimb", true);
         }
         else
         {
             rb.gravityScale = 4.0f;
+            animator.SetBool("isClimb", false);
         }
     }
 
