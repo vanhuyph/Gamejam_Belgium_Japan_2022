@@ -46,9 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: WaterLevelBGM
-    clip: {fileID: 8300000, guid: 03a96472585ad1b4d8dc1e0662c3d885, type: 3}
+    clip: {fileID: 8300000, guid: a60d63a8226bb6943ae7e79434d012f0, type: 3}
     loop: 1
-    volume: 0.02
+    volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - name: Walk

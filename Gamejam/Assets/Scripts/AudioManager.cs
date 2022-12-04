@@ -42,7 +42,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " missing");
             return;
         }
-        
+
         if (name == "Walk" || name == "Rain")
         {
             if (!s.source.isPlaying)
