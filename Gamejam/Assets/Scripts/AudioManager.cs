@@ -42,7 +42,18 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " missing");
             return;
         }
-        s.source.Play();
+        
+        if (name == "Walk" || name == "Rain")
+        {
+            if (!s.source.isPlaying)
+            {
+                s.source.Play();
+            }
+        }
+        else
+        {
+            s.source.Play();
+        }
     }
 
     public void Stop(string name)

@@ -68,6 +68,15 @@ public class PlayerControl : MonoBehaviour
     {
         animator.SetFloat("walkSpeed", Mathf.Abs(horizontal));
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        
+        if (Mathf.Abs(horizontal) > 0.01f)
+        {
+            AudioManager.instance.Play("Walk");
+        }
+        else
+        {
+            AudioManager.instance.Stop("Walk");
+        }
      
         if (isClimbing)
         {
