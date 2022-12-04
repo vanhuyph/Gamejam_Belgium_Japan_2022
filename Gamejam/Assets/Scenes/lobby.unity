@@ -504,7 +504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2631598, y: 3.0157099, z: -10}
+  m_LocalPosition: {x: 0.45065403, y: 3.01559, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9165,6 +9165,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4530832957034216714, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a60d63a8226bb6943ae7e79434d012f0, type: 3}
     - target: {fileID: 4530832957034216715, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
       propertyPath: m_RootOrder
       value: 0
