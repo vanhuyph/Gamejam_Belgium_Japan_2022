@@ -96087,7 +96087,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1532861032}
     m_Modifications:
     - target: {fileID: 4530832957034216709, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
       propertyPath: m_Name
