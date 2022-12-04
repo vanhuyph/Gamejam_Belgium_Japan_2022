@@ -13,7 +13,7 @@ public class Inventory : MonoBehaviour
 
     public float GetBlackOrbRate()
     {
-		if((blackOrbsCount >= 60)||(whiteOrbsCount >= 60))
+		if((blackOrbsCount >= 60))
 		{
 			return blackOrbsRate;
 		}
