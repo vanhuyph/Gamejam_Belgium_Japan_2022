@@ -504,7 +504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.45065403, y: 3.01559, z: -10}
+  m_LocalPosition: {x: 1.2631598, y: 3.0157099, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -785,7 +785,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1078776421}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!66 &968376984
 CompositeCollider2D:
@@ -8514,8 +8514,8 @@ GameObject:
   - component: {fileID: 1004293150}
   - component: {fileID: 1004293152}
   - component: {fileID: 1004293151}
-  - component: {fileID: 1004293154}
   - component: {fileID: 1004293155}
+  - component: {fileID: 1004293156}
   m_Layer: 0
   m_Name: WaterDoor
   m_TagString: Untagged
@@ -8536,7 +8536,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1078776421}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1004293151
 TilemapRenderer:
@@ -8739,19 +8739,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1004293154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1004293149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efc0d2af7858cb948a164334414ade5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneBuildIndex: 2
 --- !u!61 &1004293155
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8778,6 +8765,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0542145, y: 2.0588415}
   m_EdgeRadius: 0
+--- !u!114 &1004293156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004293149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc0d2af7858cb948a164334414ade5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneBuildIndex: 2
 --- !u!1 &1062590042
 GameObject:
   m_ObjectHideFlags: 0
@@ -8867,8 +8867,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 968376983}
   - {fileID: 1004293150}
+  - {fileID: 968376983}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
