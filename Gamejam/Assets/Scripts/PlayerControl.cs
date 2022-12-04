@@ -75,7 +75,7 @@ public class PlayerControl : MonoBehaviour
         else
         {
             horizontal = 0.0f;
-            animator.SetFloat("WalkSpeed", horizontal);
+            animator.SetFloat("walkSpeed", horizontal);
         }
     }
 
