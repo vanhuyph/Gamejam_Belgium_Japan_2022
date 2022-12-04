@@ -19,6 +19,13 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float groundCheckRadius;
 
     Animator animator;
+    
+    private bool isAtEnd = false;
+    
+    public void SetAtEnd()
+    {
+        isAtEnd = true;
+    }
 
     void Start()
     {
@@ -27,41 +34,49 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        inventory = GameObject.FindGameObjectWithTag("inventory").GetComponent<Inventory>();
-        horizontal = Input.GetAxisRaw("Horizontal");
-        blackOrbsjump = inventory.GetBlackOrbRate()*2;
-		//Debug.Log("orbsjump = " + blackOrbsjump.ToString());
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (!isAtEnd)
         {
-			float jump = jumpingPower + blackOrbsjump;
-			//Debug.Log("jump = " + jump.ToString());
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower + blackOrbsjump);
-        }
-		
-        if (IsGrounded())
-        {
-            animator.SetBool("isJump", false);
+            inventory = GameObject.FindGameObjectWithTag("inventory").GetComponent<Inventory>();
+            horizontal = Input.GetAxisRaw("Horizontal");
+            blackOrbsjump = inventory.GetBlackOrbRate()*2;
+            //Debug.Log("orbsjump = " + blackOrbsjump.ToString());
+            if (Input.GetButtonDown("Jump") && IsGrounded())
+            {
+                float jump = jumpingPower + blackOrbsjump;
+                //Debug.Log("jump = " + jump.ToString());
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower + blackOrbsjump);
+            }
+            
+            if (IsGrounded())
+            {
+                animator.SetBool("isJump", false);
+            }
+            else
+            {
+                animator.SetBool("isJump", true);
+            }
+
+            if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
+
+            if (isLadder)
+            {
+                vertical = Input.GetAxisRaw("Vertical");
+                if (Mathf.Abs(vertical) > 0)
+                {
+                    isClimbing = true;
+                }
+            }
+
+            Flip();
         }
         else
         {
-            animator.SetBool("isJump", true);
+            horizontal = 0.0f;
+            animator.SetFloat("WalkSpeed", horizontal);
         }
-
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
-
-        if (isLadder)
-        {
-            vertical = Input.GetAxisRaw("Vertical");
-            if (Mathf.Abs(vertical) > 0)
-            {
-                isClimbing = true;
-            }
-        }
-
-        Flip();
     }
 
     private void FixedUpdate()
@@ -77,7 +92,7 @@ public class PlayerControl : MonoBehaviour
         {
             AudioManager.instance.Stop("Walk");
         }
-     
+    
         if (isClimbing)
         {
             rb.gravityScale = 0.0f;
