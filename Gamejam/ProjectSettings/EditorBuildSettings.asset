@@ -14,13 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TakutoScene.unity
     guid: 7eb674f77c9ad6d46aea7b34c8f84aaa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/windlevel.unity
     guid: 2c2499ccad066914f9282f341db922a7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/firelevel.unity
     guid: e36ab382badc123419af84c1a92b63ee
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/earthlevel.unity
     guid: 3ca99646910418746b06d3a031f0b465
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 9d1915c5c39d3cc40b9ee93d37645a76
   m_configObjects: {}

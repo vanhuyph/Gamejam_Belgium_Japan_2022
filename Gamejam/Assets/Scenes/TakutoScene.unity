@@ -1723,75 +1723,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cc95142469b0bb489db616a621aff2e, type: 3}
---- !u!1 &178596455
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 178596457}
-  - component: {fileID: 178596456}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &178596456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178596455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43eb799cd72811545ace90ee3ebc62f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: WaterLevelBGM
-    clip: {fileID: 8300000, guid: 03a96472585ad1b4d8dc1e0662c3d885, type: 3}
-    loop: 1
-    volume: 0.02
-    pitch: 1
-    source: {fileID: 0}
-  - name: Walk
-    clip: {fileID: 8300000, guid: 395e1a5b0df481e47ac9f9831e3430ee, type: 3}
-    loop: 0
-    volume: 0.287
-    pitch: 1
-    source: {fileID: 0}
-  - name: OrbCollect
-    clip: {fileID: 8300000, guid: 6ccb002d6c320fc48ad093e0ab711785, type: 3}
-    loop: 0
-    volume: 0.05
-    pitch: 1
-    source: {fileID: 0}
-  - name: Rain
-    clip: {fileID: 8300000, guid: 6cd12aa2984548f4e966d8499f96e20f, type: 3}
-    loop: 0
-    volume: 0.001
-    pitch: 1
-    source: {fileID: 0}
---- !u!4 &178596457
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178596455}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &188039044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 137550619123815025, guid: 0cc95142469b0bb489db616a621aff2e, type: 3}
@@ -94396,6 +94327,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8143405748773807554, guid: 1426100f7c6d2b0458f42699700f4b95, type: 3}
   m_PrefabInstance: {fileID: 5494887409183519870}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4530832956923385698
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4530832957034216709, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530832957034216715, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530832957034216715, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530832957034216715, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530832957034216715, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530832957034216715, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530832957034216715, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530832957034216715, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530832957034216715, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530832957034216715, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530832957034216715, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530832957034216715, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: db94403dce7f982419bb840ff2ae75fe, type: 3}
 --- !u!1001 &5472634843098783157
 PrefabInstance:
   m_ObjectHideFlags: 0
