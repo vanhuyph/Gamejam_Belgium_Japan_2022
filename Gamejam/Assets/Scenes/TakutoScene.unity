@@ -86918,7 +86918,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5ffee7de0d9d144af9bb552a3f0794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteOrbsCount: 0
+  blackOrbsCount: 50
+  whiteOrbsCount: 50
+  blackOrbsRate: 0
   blackOrbsCountText: {fileID: 0}
   whiteOrbsCountText: {fileID: 0}
 --- !u!4 &1811195470

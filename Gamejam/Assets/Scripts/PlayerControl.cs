@@ -6,7 +6,6 @@ public class PlayerControl : MonoBehaviour
     private bool isFacingRight = true;
     private Inventory inventory;
     private float blackOrbsjump;
-    private float blackOrbsRate;
     private float vertical;
     private bool isLadder;
     private bool isClimbing;
@@ -30,20 +29,15 @@ public class PlayerControl : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("inventory").GetComponent<Inventory>();
         horizontal = Input.GetAxisRaw("Horizontal");
-        blackOrbsRate = inventory.GetBlackOrbRate();
-        if (blackOrbsRate <= 1 && 0.5 < blackOrbsRate)
-        {
-            blackOrbsjump = blackOrbsRate * 2;
-        }
-        else
-        {
-            blackOrbsjump = 1;
-        }
+        blackOrbsjump = inventory.GetBlackOrbRate()*2;
+		//Debug.Log("orbsjump = " + blackOrbsjump.ToString());
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower * blackOrbsjump);
+			float jump = jumpingPower + blackOrbsjump;
+			//Debug.Log("jump = " + jump.ToString());
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower + blackOrbsjump);
         }
-
+		
         if (IsGrounded())
         {
             animator.SetBool("isJump", false);

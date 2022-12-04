@@ -3,8 +3,9 @@ using TMPro;
 
 public class Inventory : MonoBehaviour
 {
-    public int blackOrbsCount { get; set; }
+    public int blackOrbsCount;
     public int whiteOrbsCount;
+	public float blackOrbsRate;
     public TMP_Text blackOrbsCountText;
     public TMP_Text whiteOrbsCountText;
 
@@ -12,12 +13,12 @@ public class Inventory : MonoBehaviour
 
     public float GetBlackOrbRate()
     {
-        if (blackOrbsCount + whiteOrbsCount == 0)
-        {
-            return 0.0f;
-        }
-        
-        return (float)blackOrbsCount / ((float)blackOrbsCount + (float)whiteOrbsCount);
+		if((blackOrbsCount >= 60)||(whiteOrbsCount >= 60))
+		{
+			return blackOrbsRate;
+		}
+		blackOrbsRate = (((float)blackOrbsCount / (float)whiteOrbsCount)-1) * 10;
+        return (blackOrbsRate < 0.0f ? 0.0f : blackOrbsRate);
     }
 
     private void Awake()
@@ -35,11 +36,13 @@ public class Inventory : MonoBehaviour
         if (orbTypes == "WhiteOrb")
         {
             whiteOrbsCount += count;
+			blackOrbsCount -= count;
             //whiteOrbsCountText.text = "White orbs: " + whiteOrbsCount.ToString();
         }
         else
         {
             blackOrbsCount += count;
+			whiteOrbsCount -= count;
             //blackOrbsCountText.text = "Black orbs: " + blackOrbsCount.ToString();
         }
     }
