@@ -90,6 +90,7 @@ public class PlayerControl : MonoBehaviour
             }
             
             animator.SetFloat("walkSpeed", Mathf.Abs(horizontal));
+            animator.SetBool("isJump", false);
         }
     }
 
