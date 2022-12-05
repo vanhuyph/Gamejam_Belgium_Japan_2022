@@ -48,24 +48,24 @@ MonoBehaviour:
   - name: WaterLevelBGM
     clip: {fileID: 8300000, guid: a60d63a8226bb6943ae7e79434d012f0, type: 3}
     loop: 1
-    volume: 0.2
+    volume: 0.15
     pitch: 1
     source: {fileID: 0}
   - name: Walk
     clip: {fileID: 8300000, guid: 395e1a5b0df481e47ac9f9831e3430ee, type: 3}
     loop: 0
-    volume: 0.287
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
   - name: OrbCollect
     clip: {fileID: 8300000, guid: 6ccb002d6c320fc48ad093e0ab711785, type: 3}
     loop: 0
-    volume: 0.05
+    volume: 0.07
     pitch: 1
     source: {fileID: 0}
   - name: Rain
     clip: {fileID: 8300000, guid: 6cd12aa2984548f4e966d8499f96e20f, type: 3}
     loop: 0
-    volume: 0.001
+    volume: 0.003
     pitch: 1
     source: {fileID: 0}

@@ -1,5 +1,5 @@
+using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -49,6 +49,13 @@ public class EndSequence : MonoBehaviour
             other.gameObject.GetComponent<PlayerControl>().SetAtEnd();
             
             isEndSequence = true;
+            StartCoroutine(loadCreditsScene());
         }
+    }
+
+    public IEnumerator loadCreditsScene()
+    {
+        yield return new WaitForSeconds(12f);
+        SceneManager.LoadScene("CreditsScene");
     }
 }
