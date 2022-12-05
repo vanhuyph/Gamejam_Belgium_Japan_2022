@@ -82454,7 +82454,7 @@ MonoBehaviour:
   - {fileID: 1589583113}
   - {fileID: 2022597153}
   - {fileID: 1261440698}
-  smoothing: 1
+  smoothing: 0.95
 --- !u!4 &1176214480
 Transform:
   m_ObjectHideFlags: 0
@@ -97260,7 +97260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8102732080703004923, guid: 51622a7d69a52be4d8e37d7f205cd5b5, type: 3}
       propertyPath: m_enableVertexGradient
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8102732080703004923, guid: 51622a7d69a52be4d8e37d7f205cd5b5, type: 3}
       propertyPath: m_fontColorGradientPreset
@@ -97316,7 +97316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8102732081217133446, guid: 51622a7d69a52be4d8e37d7f205cd5b5, type: 3}
       propertyPath: m_enableVertexGradient
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8102732081217133446, guid: 51622a7d69a52be4d8e37d7f205cd5b5, type: 3}
       propertyPath: m_fontColorGradientPreset
@@ -97344,7 +97344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8102732081416465773, guid: 51622a7d69a52be4d8e37d7f205cd5b5, type: 3}
       propertyPath: m_enableVertexGradient
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8102732081416465773, guid: 51622a7d69a52be4d8e37d7f205cd5b5, type: 3}
       propertyPath: m_fontColorGradientPreset

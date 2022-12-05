@@ -9472,7 +9472,7 @@ MonoBehaviour:
   backgrounds:
   - {fileID: 1138098929}
   - {fileID: 1407039144}
-  smoothing: 0.5
+  smoothing: 0.45
 --- !u!1 &1078776419
 GameObject:
   m_ObjectHideFlags: 0
