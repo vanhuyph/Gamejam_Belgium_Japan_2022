@@ -82430,7 +82430,7 @@ MonoBehaviour:
   - {fileID: 1589583113}
   - {fileID: 2022597153}
   - {fileID: 1261440698}
-  smoothing: 3
+  smoothing: 1
 --- !u!4 &1176214480
 Transform:
   m_ObjectHideFlags: 0
