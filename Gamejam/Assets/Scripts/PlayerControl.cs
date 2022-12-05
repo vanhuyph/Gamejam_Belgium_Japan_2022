@@ -74,8 +74,22 @@ public class PlayerControl : MonoBehaviour
         }
         else
         {
-            horizontal = 0.0f;
-            animator.SetFloat("walkSpeed", horizontal);
+            GameObject balanceGodObj = GameObject.Find("BalanceGod");
+            
+            if (balanceGodObj.transform.position.x - 1.0f > this.transform.position.x)
+            {
+                horizontal = 0.3f;
+            }
+            else if (balanceGodObj.transform.position.x + 1.0f < this.transform.position.x)
+            {
+                horizontal = -0.3f;
+            }
+            else
+            {
+                horizontal = 0.0f;
+            }
+            
+            animator.SetFloat("walkSpeed", Mathf.Abs(horizontal));
         }
     }
 

@@ -20,6 +20,11 @@ public class Inventory : MonoBehaviour
 		blackOrbsRate = (((float)blackOrbsCount / (float)whiteOrbsCount)-1) * 10;
         return (blackOrbsRate < 0.0f ? 0.0f : blackOrbsRate);
     }
+    
+    public float GetTotalOrbCount()
+    {
+        return Mathf.Abs(50 - blackOrbsCount);
+    }
 
     private void Awake()
     {
